@@ -18,7 +18,7 @@ const AboutSection = () => {
   };
 
   // Animation Variants
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
@@ -27,7 +27,7 @@ const AboutSection = () => {
     },
   };
 
-  const fadeInRight = {
+  const fadeInRight: Variants = {
     hidden: { opacity: 0, x: 60 },
     visible: {
       opacity: 1,
@@ -36,7 +36,7 @@ const AboutSection = () => {
     },
   };
 
-  const fadeInLeft = {
+  const fadeInLeft: Variants = {
     hidden: { opacity: 0, x: -60 },
     visible: {
       opacity: 1,
