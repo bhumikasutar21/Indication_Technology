@@ -134,12 +134,17 @@
 
 import React, { useState } from "react";
 
-function ContactSection() {
-  const [popup, setPopup] = useState(null); // for success/error popup
+type PopupState = {
+  type: "success" | "error";
+  message: string;
+} | null;
 
-  const onSubmit = async (event) => {
+function ContactSection() {
+  const [popup, setPopup] = useState<PopupState>(null); // for success/error popup
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append("access_key", "f3ff2336-edec-4fe6-b0b2-e911f4dc4ffe");
 
@@ -158,7 +163,7 @@ function ContactSection() {
 
       if (res.success) {
         setPopup({ type: "success", message: "✅ Message sent successfully!" });
-        event.target.reset();
+        event.currentTarget.reset();
       } else {
         setPopup({ type: "error", message: "❌ Failed to send message!" });
       }
@@ -252,7 +257,7 @@ function ContactSection() {
           <textarea
             name="message"
             placeholder="Enter your message"
-            rows="4"
+            rows={4}
             required
             className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
           ></textarea>

@@ -1,5 +1,6 @@
 import { Briefcase, PieChart, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -35,13 +36,13 @@ const HowItWorksSection = () => {
     },
   };
 
-  // Animation for each step
-  const stepVariants = {
+  // Use a cubic-bezier array for `ease` (valid Easing type)
+  const stepVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }, // easeOut curve
     },
   };
 

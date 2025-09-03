@@ -66,7 +66,7 @@ const ServicesSection = () => {
   };
 
   // Position logic (desktop = triangle loop)
-  const getPosition = (index) => {
+  const getPosition = (index: number) => {
     if (index === current) return "center";
     if (index === (current + 1) % services.length) return "right";
     if (index === (current + 2) % services.length) return "left";

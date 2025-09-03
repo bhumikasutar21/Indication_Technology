@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Variants } from "framer-motion";
+import type { Variants } from "framer-motion";
 import aboutWoman from "@/assets/AboutImage.png";
 import "./AboutSection.css";
 
