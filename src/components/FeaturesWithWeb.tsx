@@ -61,7 +61,7 @@ const FeatureSection = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold mb-6"
           >
-            Why Choose Our App Development?
+            Why Choose Our Web Development?
           </motion.h2>
 
           <div className="grid grid-cols-1 gap-6">

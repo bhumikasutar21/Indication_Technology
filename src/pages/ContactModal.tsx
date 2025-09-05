@@ -275,8 +275,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-      <div className="bg-black/40 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl w-[90%] md:w-[500px] p-6 relative text-white">
+    <div className="fixed inset-0 bg-black/80  backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="bg-gradient-to-b from-pink-500/40 via-purple-600/40 to-blue-800/40 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl w-[90%] md:w-[500px] p-6 relative text-white">
         {/* Close button */}
         <button
           className="absolute top-4 right-4 text-gray-300 hover:text-red-400 transition"
@@ -296,31 +296,31 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             name="name"
             required
             placeholder="Full Name"
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-gray-400"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-white-400"
           />
           <input
             name="email"
             type="email"
             required
             placeholder="Email"
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-gray-400"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-white-400"
           />
           <input
             name="subject"
             placeholder="Subject"
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-gray-400"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-white-400"
           />
           <input
             name="phone"
             placeholder="Phone"
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-gray-400"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-white-400"
           />
           <textarea
             name="message"
             rows={4}
             required
             placeholder="Message"
-            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-gray-400 resize-none"
+            className="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-white placeholder-white-400 resize-none"
           />
 
           <button

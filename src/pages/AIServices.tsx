@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import FooterFix from "@/components/FooterFix";
-import Image from "../assets/Ai-services.png";
+import Image from "../assets/AiServ.png";
 import { motion } from "framer-motion";
 import client1 from "../assets/TFox.webp";
 import client2 from "../assets/leaderlogo.png";
@@ -14,10 +15,9 @@ import client7 from "../assets/Client6.png";
 import work1 from "../assets/Adobe Express - file (9).png";
 import work2 from "../assets/Adobe Express - file (7).png";
 import work3 from "../assets/Adobe Express - file (12).png";
-import work4 from "../assets/Adobe Express - file (11).png";
-import work5 from "../assets/Adobe Express - file (10).png";
-import work6 from "../assets/Adobe Express - file (1).png";
-// import work6 from "../assets/";
+// import work4 from "../assets/Adobe Express - file (11).png";
+// import work5 from "../assets/Adobe Express - file (10).png";
+// import work6 from "../assets/Adobe Express - file (1).png";
 
 import lang1 from "../assets/programing.png";
 import lang2 from "../assets/document.png";
@@ -42,14 +42,14 @@ import lang19 from "../assets/social.png";
 import lang20 from "../assets/drupal-logo.png";
 // import lang21 from "../assets/shopify.png";
 
-import plan from "../assets/Business planning.png";
+import plan from "../assets/B2.jpeg";
 
-import Pro1 from "../assets/shopping-cart.png";
-import Pro2 from "../assets/digitalization.png";
-import Pro3 from "../assets/e-learning.png";
-import Pro4 from "../assets/crm.png";
-import Pro5 from "../assets/airplane.png";
-import Pro6 from "../assets/live-chat.png";
+import Pro1 from "../assets/briefcase.png";
+import Pro2 from "../assets/hospital.png";
+import Pro3 from "../assets/ecommerce.png";
+import Pro4 from "../assets/bank.png";
+import Pro5 from "../assets/hr-manager.png";
+import Pro6 from "../assets/agreement.png";
 
 import FeatureWithAi from "../components/FeatureWithAi";
 import { Button } from "@/components/ui/button";
@@ -75,42 +75,45 @@ import {
 import appDevHero from "@/assets/app-dev-hero.jpg";
 
 const AppDevelopment = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const appCategories = [
     {
       image: Pro1,
-      title: "E-commerce Applications",
+      title: "School Management AI Agent",
       description:
-        "Our ecommerce applications provide a seamless shopping experience. With secure payment gateways, intuitive navigation, and personalized recommendations, we help businesses boost sales and engage customers effectively.",
+        "Our school management AI agent simplifies education workflows. From automating attendance and scheduling classes to offering personalized learning paths, it empowers educators and students to achieve better outcomes with less effort.",
     },
     {
       image: Pro2,
-      title: "Social Media Platforms",
+      title: "Hospital Management AI Agent",
       description:
-        "We create social media platforms that connect people worldwide. Featuring real-time updates, multimedia sharing, and robust privacy controls, our solutions foster community engagement and dynamic interactions.",
+        "Our hospital AI agent enhances patient care and operational efficiency. With intelligent triage, appointment scheduling, and proactive health monitoring, hospitals can deliver faster, safer, and more personalized healthcare experiences.",
     },
     {
       image: Pro3,
-      title: "Online Learning Platforms",
+      title: "E-commerce AI Agent",
       description:
-        "Our online learning platforms offer interactive courses and resources. With features like live classes, quizzes, and progress tracking, we make education accessible and engaging for learners of all ages.",
+        "Our e-commerce AI agent transforms online shopping into a smart experience. With product recommendations, 24/7 customer support, and efficient order management, businesses can boost sales and keep customers engaged.",
     },
     {
       image: Pro4,
-      title: "Customer Relation Management",
+      title: "Banking & Finance AI Agent",
       description:
-        "Enhance customer relationships with our CRM solutions. Offering contact management, sales tracking, and customer support tools, our CRMs help businesses streamline processes.",
+        "Our banking AI agent ensures smarter financial operations. From detecting fraud in real time to offering personalized financial advice and automating customer support, it helps institutions build trust and improve customer satisfaction.",
     },
     {
       image: Pro5,
-      title: "Travel and Tourism Websites",
+      title: "HR & Recruitment AI Agent",
       description:
-        "Our travel and tourism websites provide comprehensive travel planning. With features like booking systems, destination guides, and user reviews, we help users plan memorable trips and experiences.",
+        "Our HR AI agent streamlines recruitment and employee management. With intelligent candidate screening, onboarding automation, and instant employee query handling, HR teams can save time and focus on building stronger workplaces.",
     },
     {
       image: Pro6,
-      title: "Real-time Chat Applications",
+      title: "Real Estate AI Agent",
       description:
-        "Our real-time chat apps enable instant communication. Featuring secure messaging, file sharing, and video calls, our solutions enhance connectivity and collaboration for both personal and professional use",
+        "Our real estate AI agent makes property management effortless. By offering virtual tours, handling tenant queries, and predicting maintenance needs, it helps agencies and property managers deliver a seamless real estate experience.",
     },
   ];
 
@@ -123,15 +126,6 @@ const AppDevelopment = () => {
     },
     {
       image: work3,
-    },
-    {
-      image: work4,
-    },
-    {
-      image: work5,
-    },
-    {
-      image: work6,
     },
   ];
 
@@ -206,7 +200,7 @@ const AppDevelopment = () => {
       >
         <div className="relative z-10 text-white px-6">
           <p className="text-lg font-medium mb-4">--Our Core Services--</p>
-          <h1 className="text-4xl md:text-6xl font-bold">Ai Services</h1>
+          {/* <h1 className="text-4xl md:text-6xl font-bold">Ai Services</h1> */}
         </div>
       </section>
 
@@ -281,7 +275,7 @@ const AppDevelopment = () => {
               <img
                 src={plan}
                 alt="Team working"
-                className="rounded-xl shadow-lg w-full object-cover"
+                className="rounded-xl shadow-lg w-full h-69 object-cover"
               />
 
               <motion.div
@@ -341,7 +335,7 @@ const AppDevelopment = () => {
             <div className="grid md:grid-cols-3 gap-12 text-center">
               <div className="animate-fade-in-up">
                 <div className="text-6xl font-poppins font-bold gradient-text mb-4">
-                  4.98
+                  4.95
                 </div>
                 <p className="text-muted-foreground">100+ ratings</p>
               </div>
@@ -374,7 +368,7 @@ const AppDevelopment = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-8">
-                Comprehensive App Development <br />
+                Comprehensive Ai Automation <br />
                 <span className="gradient-text">Services Tailored</span>
               </h2>
             </div>
@@ -383,7 +377,7 @@ const AppDevelopment = () => {
               {appCategories.map((category, index) => (
                 <Card
                   key={index}
-                  className="bg-card border-border hover:shadow-glow transition-all duration-300"
+                  className="w-full border bg-card border-border hover:shadow-pink-500 transition-all duration-300 hover-lift"
                 >
                   <CardContent className="p-8 text-center">
                     <div className="w-20 h-20 bg-muted/50 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
@@ -477,11 +471,11 @@ const AppDevelopment = () => {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-8">
               Ready to Build Your{" "}
-              <span className="gradient-text">Mobile App?</span>
+              <span className="gradient-text">Ai Automation?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's transform your idea into a powerful mobile application that
-              users will love.
+              Let's transform your idea into a powerful Ai agents that users
+              will love.
             </p>
             <Button
               size="lg"
@@ -493,7 +487,7 @@ const AppDevelopment = () => {
                 }
               }}
             >
-              Let's Talk- Send a Message
+              Send a Message
             </Button>
           </div>
         </section>

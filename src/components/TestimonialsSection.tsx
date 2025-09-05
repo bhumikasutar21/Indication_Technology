@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Star, CheckCircle } from "lucide-react";
+import Men1 from "../assets/Men1.png";
+import Men2 from "../assets/Men2.png";
+import Men3 from "../assets/Men3.png";
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -8,8 +11,7 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Kaustubh Dabhilkar",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: Men1,
       text: "The team delivered a fantastic website that exceeded my expectations. Very responsive and committed to getting things done right.",
       rating: 5,
       timeAgo: "4 months ago",
@@ -24,16 +26,14 @@ const TestimonialsSection = () => {
     },
     {
       name: "Matthew Taylor",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+      image: Men2,
       text: "Indication Technology's expertise in mobile app development is unmatched. They took our concept and turned it into a fully functional and visually stunning app.",
       rating: 5,
       timeAgo: "1 month ago",
     },
     {
       name: "Michael Brown",
-      image:
-        "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face",
+      image: Men3,
       text: "Their IT solutions have strengthened our infrastructure and security.",
       rating: 5,
       timeAgo: "3 weeks ago",

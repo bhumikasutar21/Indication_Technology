@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,7 +30,7 @@ import lang8 from "../assets/library.png";
 import lang9 from "../assets/figma.png";
 import lang10 from "../assets/cordova_bot.png";
 
-import plan from "../assets/Business planning.png";
+import plan from "../assets/B2.jpeg";
 
 import Pro1 from "../assets/healthcare.png";
 import Pro2 from "../assets/social-media.png";
@@ -62,6 +63,10 @@ import {
 import appDevHero from "@/assets/app-dev-hero.jpg";
 
 const AppDevelopment = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const appCategories = [
     {
       image: Pro1,
@@ -141,10 +146,10 @@ const AppDevelopment = () => {
     { name: "iOS Native Development", logo: lang4 },
     { name: "UI/UX", logo: lang5 },
     { name: "Swift", logo: lang6 },
-    { name: "Hybrid (Flutter)", logo: lang7 },
-    { name: "Hybrid (React Native)", logo: lang8 },
+    { name: "Flutter (Hybrid)", logo: lang7 },
+    { name: "React Native (Hybrid)", logo: lang8 },
     { name: "Figma", logo: lang9 },
-    { name: "Hybrid (Cordova)", logo: lang10 },
+    { name: "Cordova (Hybrid)", logo: lang10 },
   ];
 
   const faqs = [
@@ -289,7 +294,7 @@ const AppDevelopment = () => {
               <img
                 src={plan}
                 alt="Team working"
-                className="rounded-xl shadow-lg w-full object-cover"
+                className="rounded-xl shadow-lg w-full h-69 object-cover"
               />
 
               <motion.div
@@ -349,7 +354,7 @@ const AppDevelopment = () => {
             <div className="grid md:grid-cols-3 gap-12 text-center">
               <div className="animate-fade-in-up">
                 <div className="text-6xl font-poppins font-bold gradient-text mb-4">
-                  4.98
+                  4.95
                 </div>
                 <p className="text-muted-foreground">100+ ratings</p>
               </div>
@@ -394,7 +399,7 @@ const AppDevelopment = () => {
               {appCategories.map((category, index) => (
                 <Card
                   key={index}
-                  className="w-full bg-card border border-border hover:shadow-glow transition-all duration-300"
+                  className="w-full border bg-card border-border hover:shadow-pink-500 transition-all duration-300 hover-lift"
                 >
                   <CardContent className="p-4 sm:p-6 md:p-8 text-center">
                     {/* Icon */}
@@ -518,7 +523,7 @@ const AppDevelopment = () => {
                 }
               }}
             >
-              <Link to="/contact">Let's Talk - Send a Message</Link>
+              <Link to="/contact">Send a Message</Link>
             </Button>
           </div>
         </section>

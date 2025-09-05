@@ -184,13 +184,13 @@ const ServicesSection = () => {
               onClick={prev}
               className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={next}
               className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         )}

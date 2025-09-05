@@ -16,14 +16,14 @@ const HowItWorksSection = () => {
       title: "Design & Prototyping",
       description:
         "With a well-defined strategy, we proceed to design creation and prototype development.",
-      color: "bg-brand-purple",
+      color: "bg-brand-pink",
     },
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: "Development & Implementation",
       description:
         "After finalizing the design, our development team steps in to transform your project into reality.",
-      color: "bg-brand-pink",
+      color: "bg-brand-purple",
     },
   ];
 

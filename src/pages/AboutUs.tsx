@@ -6,9 +6,13 @@ import { Clock, Globe, Link } from "lucide-react";
 import { motion } from "framer-motion";
 import FooterFix from "@/components/FooterFix";
 import ContactModal from "../pages/ContactModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const [isContactOpen, setIsContactOpen] = useState(false);
   return (
     <div className="bg-background text-foreground">
@@ -72,7 +76,7 @@ const AboutUs = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
             {[
-              { value: "4.98", label: "100+ ratings" },
+              { value: "4.95", label: "100+ ratings" },
               { value: "98%", label: "Genuine client's positive feedback" },
               { value: "24/7", label: "Support Channel open" },
             ].map((stat, i) => (
@@ -190,12 +194,12 @@ const AboutUs = () => {
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-poppins font-bold text-foreground mb-4 sm:mb-6 md:mb-8">
               Ready to Build Your{" "}
-              <span className="gradient-text">Mobile App?</span>
+              <span className="gradient-text">Application?</span>
             </h2>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto">
-              Let's transform your idea into a powerful mobile application that
-              users will love.
+              Let's transform your idea into a powerful application that users
+              will love.
             </p>
 
             <Button
@@ -208,7 +212,7 @@ const AboutUs = () => {
                 }
               }}
             >
-              Let's Talk — Send a Message
+              Send a Message
             </Button>
           </div>
         </motion.section>

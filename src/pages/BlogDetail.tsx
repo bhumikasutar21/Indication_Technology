@@ -18,7 +18,45 @@ interface BlogPost {
   tags: string[];
 }
 
+interface ShareButtonProps {
+  url: string;
+  title: string;
+}
+
+// ✅ ShareButton component
+const ShareButton = ({ url, title }: ShareButtonProps) => {
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title,
+          text: "Check out this blog!",
+          url,
+        });
+      } catch (error) {
+        console.error("Error sharing:", error);
+      }
+    } else {
+      navigator.clipboard.writeText(url);
+      alert("Link copied to clipboard!");
+    }
+  };
+
+  return (
+    <Button
+      onClick={handleShare}
+      className="bg-gradient-primary hover:opacity-90 text-white"
+    >
+      <Share2 className="w-4 h-4 mr-2" />
+      Share
+    </Button>
+  );
+};
+
 const BlogDetail = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const { id } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState<BlogPost | null>(null);
@@ -241,16 +279,7 @@ const BlogDetail = () => {
       <section className="pt-24 pb-16 bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-pink/10 via-brand-purple/10 to-brand-blue/10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* <Button
-              onClick={() => navigate("/")}
-              variant="ghost"
-              className="mb-8 text-brand-purple hover:text-brand-purple/80"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button> */}
-
+          <div className="max-w-5xl mx-auto">
             <div className="mb-8">
               <div className="flex flex-wrap gap-2 mb-4">
                 {blog.tags.map((tag, index) => (
@@ -304,7 +333,7 @@ const BlogDetail = () => {
       {/* Content Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <article
               className="animate-fade-in-up"
               style={{ animationDelay: "0.6s" }}
@@ -322,10 +351,9 @@ const BlogDetail = () => {
                     Help others discover this content
                   </p>
                 </div>
-                <Button className="bg-gradient-primary hover:opacity-90 text-white">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share
-                </Button>
+
+                {/* Share Button */}
+                <ShareButton url={window.location.href} title={blog.title} />
               </div>
             </div>
 

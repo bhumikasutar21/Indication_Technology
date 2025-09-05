@@ -91,6 +91,7 @@
 // export default FooterFix;
 
 import React from "react";
+import { ImWhatsapp } from "react-icons/im";
 import { Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -115,6 +116,11 @@ const FooterFix = () => {
               link: "https://www.instagram.com/indication_tech/?utm_source=qr&igsh=MWFmOWNucGdjbWg2#",
             },
             { Icon: Facebook, bg: "bg-blue-700", link: "#" },
+            {
+              Icon: ImWhatsapp,
+              bg: "bg-green-500",
+              link: "https://api.whatsapp.com/send?phone=917030194516&text=Hello,%20I%20want%20to%20inquire%20about%20a%20project.",
+            },
           ].map(({ Icon, bg, link }, index) => (
             <motion.a
               key={index}
