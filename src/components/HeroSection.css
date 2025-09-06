@@ -2,9 +2,10 @@
 .hero-container {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -93,7 +94,7 @@
   }
 
   .hero-content {
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   .hero-title {

@@ -40,7 +40,7 @@ const BlogSection = () => {
 
   return (
     <section id="blog" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="w-full px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-4">
             Our <span className="gradient-text">Blogs</span>

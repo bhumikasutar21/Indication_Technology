@@ -19,9 +19,9 @@ const AboutUs = () => {
       <Navbar />
 
       {/* Page Wrapper with 90% width */}
-      <div className="w-[90%] mx-auto px-6">
+      <div className="w-full mx-auto px-6">
         {/* Hero Section */}
-        <section className="container mx-auto px-6 pt-32 pb-20 grid md:grid-cols-2 items-center gap-12">
+        <section className="container w-full px-6 pt-32 pb-20 grid md:grid-cols-2 items-center gap-12">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -74,7 +74,7 @@ const AboutUs = () => {
 
         {/* Statistics Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+          <div className="container w-full mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
             {[
               { value: "4.95", label: "100+ ratings" },
               { value: "98%", label: "Genuine client's positive feedback" },
@@ -99,7 +99,7 @@ const AboutUs = () => {
 
       {/* Mission & Vision Section */}
       <section className="bg-black text-white py-20">
-        <div className="w-[90%] mx-auto px-6">
+        <div className="w-full mx-auto px-6">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 text-center md:text-center">
             {/* Mission */}
             <motion.div
@@ -191,7 +191,7 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="container mx-auto px-4 sm:px-6 text-center">
+          <div className="container w-full mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-poppins font-bold text-foreground mb-4 sm:mb-6 md:mb-8">
               Ready to Build Your{" "}
               <span className="gradient-text">Application?</span>
@@ -206,10 +206,7 @@ const AboutUs = () => {
               size="lg"
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg"
               onClick={() => {
-                const contactSection = document.getElementById("contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                }
+                setIsContactOpen(true);
               }}
             >
               Send a Message
@@ -222,6 +219,11 @@ const AboutUs = () => {
       {/* {isContactOpen && (
         <ContactModal onClose={() => setIsContactOpen(false)} />
       )} */}
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
 
       <Footer />
       <FooterFix />

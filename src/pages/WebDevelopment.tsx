@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import FooterFix from "@/components/FooterFix";
@@ -11,6 +11,8 @@ import client4 from "../assets/Client4.jpg";
 import client5 from "../assets/client5.png";
 import client6 from "../assets/gig.jpg";
 import client7 from "../assets/Client6.png";
+
+import ContactModal from "../pages/ContactModal";
 
 import work1 from "../assets/Adobe Express - file (9).png";
 import work2 from "../assets/Adobe Express - file (7).png";
@@ -76,6 +78,8 @@ import {
 import appDevHero from "@/assets/app-dev-hero.jpg";
 
 const AppDevelopment = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -517,10 +521,7 @@ const AppDevelopment = () => {
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 font-semibold 
                  text-sm sm:text-base md:text-lg px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6"
               onClick={() => {
-                const contactSection = document.getElementById("contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                }
+                setIsContactOpen(true);
               }}
             >
               Send a Message
@@ -528,6 +529,11 @@ const AppDevelopment = () => {
           </div>
         </section>
       </div>
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
 
       <Footer />
       <FooterFix />

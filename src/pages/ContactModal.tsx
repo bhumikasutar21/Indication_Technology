@@ -275,7 +275,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/80  backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/80  backdrop-blur-sm flex items-center justify-center z-[9999]">
       <div className="bg-gradient-to-b from-pink-500/40 via-purple-600/40 to-blue-800/40 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl w-[90%] md:w-[500px] p-6 relative text-white">
         {/* Close button */}
         <button

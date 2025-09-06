@@ -183,7 +183,7 @@ function ContactSection() {
       id="contact"
       className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 px-6 py-12"
     >
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className=" w-full grid md:grid-cols-2 gap-12 items-center px-6">
         {/* Left Content */}
         <div>
           <h2 className="text-4xl font-extrabold text-gray-900 leading-snug">

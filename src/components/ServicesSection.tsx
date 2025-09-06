@@ -78,7 +78,7 @@ const ServicesSection = () => {
       id="services"
       className="py-20 overflow-hidden bg-[linear-gradient(135deg,hsl(var(--brand-pink)_/_0.2),hsl(var(--brand-purple)_/_0.2),hsl(var(--brand-blue)_/_0.2))]"
     >
-      <div className="container mx-auto px-6 text-center">
+      <div className="w-full px-6 text-center">
         <p className="text-brand-purple font-medium tracking-wide uppercase mb-4">
           Our Services
         </p>

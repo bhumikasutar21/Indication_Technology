@@ -4,9 +4,13 @@
 
 /* Layout */
 .about-container {
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
+  /* margin: 0 auto;
+  padding: 0 1.25rem; */
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 clamp(1rem, 5vw, 3rem); /* scales nicely */
+  max-width: 100%; /* remove the 1200px lock */
 }
 
 .about-grid {

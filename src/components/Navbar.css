@@ -6,14 +6,15 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 52;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-container {
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;

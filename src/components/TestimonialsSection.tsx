@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-background">
+    <section className="w-full py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold font-poppins text-foreground">
