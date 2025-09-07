@@ -218,7 +218,7 @@ const AppDevelopment = () => {
       <FeatureWithWeb />
 
       {/* Page Wrapper with 80% width */}
-      <div className="w-[90%] mx-auto ">
+      <div className="w-[100%] mx-auto">
         {/* Portfolio Mobile Animation Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-2 sm:px-6">
