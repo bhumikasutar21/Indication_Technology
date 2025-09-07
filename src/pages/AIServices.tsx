@@ -212,7 +212,7 @@ const AppDevelopment = () => {
       <FeatureWithAi />
 
       {/* Page Wrapper with 80% width */}
-      <div className="w-[90%] mx-auto px-6">
+      <div className="w-[100%] mx-auto">
         {/* Portfolio Mobile Animation Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
@@ -239,6 +239,7 @@ const AppDevelopment = () => {
                       {/* smaller height on mobile */}
                       <img
                         src={item.image}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
@@ -250,7 +251,7 @@ const AppDevelopment = () => {
         </section>
 
         {/* Client Ticker Section */}
-        {/* <div className="w-full  py-12 overflow-hidden">
+        <div className="w-full  py-12 overflow-hidden">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground mb-12 text-center">
             Our <span className="gradient-text">Clients</span>
           </h2>
@@ -260,16 +261,84 @@ const AppDevelopment = () => {
             animate={{ x: ["100%", "-100%"] }}
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
-            <img src={client2} alt="Client 2" className="h-12 w-auto" />
-            <img src={client3} alt="Client 3" className="h-12 w-auto" />
-            <img src={client4} alt="Client 4" className="h-12 w-auto" />
-            <img src={client5} alt="Client 5" className="h-10 w-64" />
-            <img src={client6} alt="Client 6" className="h-8 w-64" />
-            <img src={client7} alt="Client 7" className="h-10 w-64" />
+            {/* <img src={client1} alt="Client 1" className="h-12 w-64" /> */}
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
 
-           
+            {/* Duplicates */}
+            {/* <img src={client1} alt="Client 1" className="h-10 w-64" /> */}
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
           </motion.div>
-        </div> */}
+        </div>
 
         {/* Experience & Clients Section */}
         <section className="py-20 bg-muted/30">
@@ -279,6 +348,7 @@ const AppDevelopment = () => {
               <img
                 src={plan}
                 alt="Team working"
+                loading="lazy"
                 className="rounded-xl shadow-lg w-full h-69 object-cover"
               />
 
@@ -388,6 +458,7 @@ const AppDevelopment = () => {
                       <img
                         src={category.image}
                         alt={category.title}
+                        loading="lazy"
                         className="w-12 h-12 object-contain"
                       />
                     </div>

@@ -15,6 +15,7 @@ import Image3 from "../assets/Service4.png";
 const ServicesSection = () => {
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   const services = [
     {
@@ -41,8 +42,19 @@ const ServicesSection = () => {
   ];
 
   // Detect mobile screen size
+  // useEffect(() => {
+  //   const handleResize = () => setIsMobile(window.innerWidth < 768);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 640); // phones
+      setIsTablet(width >= 640 && width < 1024); // tablets
+    };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -73,6 +85,131 @@ const ServicesSection = () => {
     return "hidden";
   };
 
+  // return (
+  //   <section
+  //     id="services"
+  //     className="py-20 overflow-hidden bg-[linear-gradient(135deg,hsl(var(--brand-pink)_/_0.2),hsl(var(--brand-purple)_/_0.2),hsl(var(--brand-blue)_/_0.2))]"
+  //   >
+  //     <div className="w-full px-6 text-center">
+  //       <p className="text-brand-purple font-medium tracking-wide uppercase mb-4">
+  //         Our Services
+  //       </p>
+  //       <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-12">
+  //         Empowering Your{" "}
+  //         <span className="gradient-text">Digital Evolution</span>
+  //       </h2>
+
+  //       {/* MOBILE VIEW (Stacked Cards) */}
+  //       {isMobile ? (
+  //         <div className="space-y-6">
+  //           {services.map((service, index) => (
+  //             <div
+  //               key={index}
+  //               className="relative rounded-2xl overflow-hidden shadow-lg border border-brand-purple/40 bg-black/50 text-left"
+  //               style={{
+  //                 backgroundImage: `url(${service.image})`,
+  //                 backgroundSize: "cover",
+  //                 backgroundPosition: "center",
+  //               }}
+  //             >
+  //               {/* Overlay */}
+  //               <div className="absolute inset-0 bg-black/50" />
+  //               {/* Content */}
+  //               <div className="relative z-10 p-6">
+  //                 <div className="w-14 h-14 flex items-center justify-center bg-brand-purple/80 rounded-xl mb-4">
+  //                   {service.icon}
+  //                 </div>
+  //                 <h3 className="text-xl font-bold mb-2 text-white">
+  //                   {service.title}
+  //                 </h3>
+  //                 <p className="text-gray-200 text-sm">{service.description}</p>
+  //               </div>
+  //             </div>
+  //           ))}
+  //         </div>
+  //       ) : (
+  //         /* DESKTOP VIEW (Carousel with triangle loop) */
+  //         <div className="relative flex justify-center items-center">
+  //           <div className="relative flex w-full max-w-6xl h-[420px] items-center justify-center">
+  //             {services.map((service, index) => {
+  //               const pos = getPosition(index);
+  //               if (pos === "hidden") return null;
+
+  //               return (
+  //                 <motion.div
+  //                   key={index}
+  //                   className="absolute rounded-2xl overflow-hidden shadow-xl text-white flex flex-col justify-end"
+  //                   style={{
+  //                     backgroundImage: `url(${service.image})`,
+  //                     backgroundSize: "cover",
+  //                     backgroundPosition: "center",
+  //                   }}
+  //                   animate={
+  //                     pos === "center"
+  //                       ? {
+  //                           opacity: 1,
+  //                           scale: 1,
+  //                           zIndex: 50,
+  //                           x: 0,
+  //                           width: "60%",
+  //                           height: "100%",
+  //                         }
+  //                       : pos === "left"
+  //                       ? {
+  //                           opacity: 0.6,
+  //                           scale: 0.85,
+  //                           zIndex: 30,
+  //                           x: "-65%",
+  //                           width: "45%",
+  //                           height: "80%",
+  //                         }
+  //                       : {
+  //                           opacity: 0.6,
+  //                           scale: 0.85,
+  //                           zIndex: 30,
+  //                           x: "65%",
+  //                           width: "45%",
+  //                           height: "80%",
+  //                         }
+  //                   }
+  //                   transition={{ duration: 0.6, ease: "easeInOut" }}
+  //                 >
+  //                   <div className="absolute inset-0 bg-black/50" />
+  //                   <div className="relative z-10 p-6 text-left">
+  //                     <div className="w-14 h-14 flex items-center justify-center bg-brand-purple/80 rounded-xl mb-4">
+  //                       {service.icon}
+  //                     </div>
+  //                     <h3 className="text-xl md:text-2xl font-bold mb-2">
+  //                       {service.title}
+  //                     </h3>
+  //                     <p className="text-sm md:text-base text-gray-200">
+  //                       {service.description}
+  //                     </p>
+  //                   </div>
+  //                 </motion.div>
+  //               );
+  //             })}
+  //           </div>
+
+  //           {/* Navigation Arrows */}
+  //           <button
+  //             onClick={prev}
+  //             className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
+  //           >
+  //             <ChevronLeft className="w-4 h-4" />
+  //           </button>
+  //           <button
+  //             onClick={next}
+  //             className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
+  //           >
+  //             <ChevronRight className="w-4 h-4" />
+  //           </button>
+  //         </div>
+  //       )}
+  //     </div>
+  //   </section>
+  // );
+
   return (
     <section
       id="services"
@@ -82,12 +219,12 @@ const ServicesSection = () => {
         <p className="text-brand-purple font-medium tracking-wide uppercase mb-4">
           Our Services
         </p>
-        <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-foreground mb-12">
           Empowering Your{" "}
           <span className="gradient-text">Digital Evolution</span>
         </h2>
 
-        {/* MOBILE VIEW (Stacked Cards) */}
+        {/* 📱 Mobile: Stacked */}
         {isMobile ? (
           <div className="space-y-6">
             {services.map((service, index) => (
@@ -100,9 +237,33 @@ const ServicesSection = () => {
                   backgroundPosition: "center",
                 }}
               >
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50" />
-                {/* Content */}
+                <div className="relative z-10 p-6">
+                  <div className="w-14 h-14 flex items-center justify-center bg-brand-purple/80 rounded-xl mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-white">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : isTablet ? (
+          // 📲 Tablet: Grid (2 cols)
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="relative rounded-2xl overflow-hidden shadow-lg border border-brand-purple/40 bg-black/50 text-left"
+                style={{
+                  backgroundImage: `url(${service.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 p-6">
                   <div className="w-14 h-14 flex items-center justify-center bg-brand-purple/80 rounded-xl mb-4">
                     {service.icon}
@@ -116,9 +277,9 @@ const ServicesSection = () => {
             ))}
           </div>
         ) : (
-          /* DESKTOP VIEW (Carousel with triangle loop) */
+          // 💻 Desktop/Large Screens: Carousel
           <div className="relative flex justify-center items-center">
-            <div className="relative flex w-full max-w-6xl h-[420px] items-center justify-center">
+            <div className="relative flex w-full max-w-7xl h-[380px] sm:h-[420px] lg:h-[480px] items-center justify-center">
               {services.map((service, index) => {
                 const pos = getPosition(index);
                 if (pos === "hidden") return null;
@@ -147,16 +308,16 @@ const ServicesSection = () => {
                             opacity: 0.6,
                             scale: 0.85,
                             zIndex: 30,
-                            x: "-65%",
-                            width: "45%",
+                            x: "-55%",
+                            width: "40%",
                             height: "80%",
                           }
                         : {
                             opacity: 0.6,
                             scale: 0.85,
                             zIndex: 30,
-                            x: "65%",
-                            width: "45%",
+                            x: "55%",
+                            width: "40%",
                             height: "80%",
                           }
                     }
@@ -167,10 +328,10 @@ const ServicesSection = () => {
                       <div className="w-14 h-14 flex items-center justify-center bg-brand-purple/80 rounded-xl mb-4">
                         {service.icon}
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-200">
+                      <p className="text-sm md:text-base lg:text-lg text-gray-200">
                         {service.description}
                       </p>
                     </div>
@@ -179,18 +340,18 @@ const ServicesSection = () => {
               })}
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Navigation */}
             <button
               onClick={prev}
               className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={next}
               className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 bg-brand-purple p-3 rounded-full text-white hover:bg-brand-purple/80 transition"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         )}

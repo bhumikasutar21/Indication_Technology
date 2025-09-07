@@ -193,12 +193,64 @@
 }
 
 /* Accessibility: reduce motion respects user preference */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   .animate-on-scroll,
   .hover-lift,
   .btn-dark,
   .btn-gradient {
     transition: none !important;
     transform: none !important;
+  }
+} */
+
+/* Tablets (iPad Mini, iPad, Surface Pro portrait) */
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr; /* side-by-side */
+    gap: 2rem;
+  }
+
+  .about-section {
+    padding: 4rem 2rem; /* breathing space */
+  }
+
+  .about-title {
+    font-size: 2.4rem; /* prevent oversized headings */
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop (large screens) */
+@media (min-width: 1200px) {
+  .about-grid {
+    gap: 3.5rem;
+  }
+
+  .about-section {
+    padding: 6rem 3rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+}
+
+/* Small screens */
+
+@media (max-width: 400px) {
+  .about-container {
+    padding: 0 1rem;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }

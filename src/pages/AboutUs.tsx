@@ -67,6 +67,7 @@ const AboutUs = () => {
             <img
               src={About}
               alt="Team working"
+              loading="lazy"
               className="rounded-1xl shadow-lg object-cover clip-slant"
             />
           </motion.div>

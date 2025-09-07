@@ -160,7 +160,7 @@
 }
 
 /* --- Responsive Breakpoints --- */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
@@ -170,15 +170,66 @@
   .mobile-menu {
     display: flex;
   }
-}
+} */
 
 /* Desktop contact button (hidden on mobile) */
-.contact-btn.desktop {
+/* .contact-btn.desktop {
   display: inline-block;
 }
 
 @media (max-width: 768px) {
   .contact-btn.desktop {
     display: none;
+  }
+} */
+
+/* --- Tablets (768px–1024px) --- */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px; /* reduce spacing */
+    font-size: 15px;
+  }
+  .logo img {
+    height: 42px; /* shrink logo slightly */
+  }
+  .contact-btn.desktop {
+    padding: 6px 18px;
+    font-size: 14px;
+  }
+}
+
+/* --- Small Tablets + Landscape Phones (600px–820px, iPads) --- */
+@media (max-width: 820px) {
+  .nav-links {
+    display: none; /* hide desktop nav */
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .contact-btn.desktop {
+    display: none;
+  }
+}
+
+/* --- Small Phones (<480px) --- */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 12px 16px; /* tighter padding */
+  }
+  .logo img {
+    height: 36px;
+  }
+  .contact-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+  .mobile-link {
+    font-size: 14px;
   }
 }

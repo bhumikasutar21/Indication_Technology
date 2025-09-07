@@ -20,7 +20,6 @@ import work3 from "../assets/Adobe Express - file (12).png";
 import work4 from "../assets/Adobe Express - file (11).png";
 import work5 from "../assets/Adobe Express - file (10).png";
 import work6 from "../assets/Adobe Express - file (1).png";
-// import work6 from "../assets/";
 
 import lang1 from "../assets/programing.png";
 import lang2 from "../assets/document.png";
@@ -41,9 +40,6 @@ import lang15 from "../assets/mysql.png";
 import lang16 from "../assets/data-cleaning.png";
 import lang17 from "../assets/database (1).png";
 import lang18 from "../assets/database.png";
-// import lang19 from "../assets/social.png";
-// import lang20 from "../assets/drupal-logo.png";
-// import lang21 from "../assets/shopify.png";
 
 import plan from "../assets/B2.jpeg";
 
@@ -209,10 +205,10 @@ const AppDevelopment = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          height: "500px", // adjust height as needed
+          height: "500px",
         }}
       >
-        <div className="relative z-10 text-white px-6">
+        <div className="relative z-10 text-white ">
           <p className="text-lg font-medium mb-4">--Our Core Services--</p>
           <h1 className="text-4xl md:text-6xl font-bold">Web Development</h1>
         </div>
@@ -222,7 +218,7 @@ const AppDevelopment = () => {
       <FeatureWithWeb />
 
       {/* Page Wrapper with 80% width */}
-      <div className="w-[90%] mx-auto px-6">
+      <div className="w-[90%] mx-auto ">
         {/* Portfolio Mobile Animation Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-2 sm:px-6">
@@ -250,6 +246,7 @@ const AppDevelopment = () => {
                       <img
                         src={item.image}
                         alt={`Portfolio ${index}`}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
@@ -272,21 +269,81 @@ const AppDevelopment = () => {
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
             {/* <img src={client1} alt="Client 1" className="h-12 w-64" /> */}
-            <img src={client2} alt="Client 2" className="h-12 w-auto" />
-            <img src={client3} alt="Client 3" className="h-12 w-auto" />
-            <img src={client4} alt="Client 4" className="h-12 w-auto" />
-            <img src={client5} alt="Client 5" className="h-10 w-64" />
-            <img src={client6} alt="Client 6" className="h-8 w-64" />
-            <img src={client7} alt="Client 7" className="h-10 w-64" />
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
 
             {/* Duplicates */}
             {/* <img src={client1} alt="Client 1" className="h-10 w-64" /> */}
-            <img src={client2} alt="Client 2" className="h-12 w-auto" />
-            <img src={client3} alt="Client 3" className="h-12 w-auto" />
-            <img src={client4} alt="Client 4" className="h-12 w-auto" />
-            <img src={client5} alt="Client 5" className="h-10 w-64" />
-            <img src={client6} alt="Client 6" className="h-8 w-64" />
-            <img src={client7} alt="Client 7" className="h-10 w-64" />
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
           </motion.div>
         </div>
 
@@ -298,6 +355,7 @@ const AppDevelopment = () => {
               <img
                 src={plan}
                 alt="Team working"
+                loading="lazy"
                 className="rounded-xl shadow-lg w-full h-69 object-cover"
               />
 

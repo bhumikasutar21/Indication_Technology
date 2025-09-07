@@ -22,7 +22,7 @@ const FeatureSection = () => {
       ref={ref}
       className="relative bg-[#f8e6f4] py-24 px-6 overflow-hidden"
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+      <div className=" mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         {/* Phone Image */}
         <motion.figure
           animate={{ y: [0, -12, 0] }}
@@ -32,6 +32,7 @@ const FeatureSection = () => {
           <img
             src={Web}
             alt="Web"
+            loading="lazy"
             className="w-[100vw] md:w-[900px] object-contain"
           />
 
@@ -71,7 +72,7 @@ const FeatureSection = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.3 }}
-                className="p-4 bg-white rounded-xl shadow-md"
+                className="p-3 bg-white rounded-xl shadow-md"
               >
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               </motion.div>

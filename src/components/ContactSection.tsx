@@ -179,25 +179,118 @@ function ContactSection() {
   };
 
   return (
-    <div
+    // <div
+    //   id="contact"
+    //   className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 px-6 py-12"
+    // >
+    //   <div className=" w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    //     {/* Left Content */}
+    //     <div>
+    //       <h2 className="text-4xl font-extrabold text-gray-900 leading-snug">
+    //         Schedule Your{" "}
+    //         <span className="bg-gradient-to-r from-pink-500 to-blue-600 bg-clip-text text-transparent">
+    //           Appointment
+    //         </span>
+    //       </h2>
+    //       <p className="mt-4 text-gray-600">
+    //         From first hello to final handshake, we're here to assist you every
+    //         step of the way. Reach out—your next big move starts here.
+    //       </p>
+
+    //       <ul className="mt-6 space-y-3 text-gray-700">
+    //         <li>⚡ Connect all your tools in one place.</li>
+    //         <li>🚀 Stay ahead with cutting-edge features.</li>
+    //         <li>🧩 Tailor our platform to your needs.</li>
+    //         <li>💬 24/7 Support: Always here to help.</li>
+    //         <li>✨ ...And more</li>
+    //       </ul>
+    //     </div>
+
+    //     {/* Right Form */}
+    //     <form
+    //       onSubmit={onSubmit}
+    //       className="bg-white shadow-lg rounded-2xl p-8 space-y-5 relative"
+    //     >
+    //       {/* Popup Message */}
+    //       {popup && (
+    //         <div
+    //           className={`absolute top-[-50px] left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-md text-white ${
+    //             popup.type === "success" ? "bg-green-500" : "bg-red-500"
+    //           }`}
+    //         >
+    //           {popup.message}
+    //         </div>
+    //       )}
+
+    //       <input
+    //         type="email"
+    //         name="email"
+    //         placeholder="Enter your email"
+    //         required
+    //         className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+    //       />
+
+    //       <input
+    //         type="text"
+    //         name="name"
+    //         placeholder="Enter your name"
+    //         required
+    //         className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+    //       />
+
+    //       <input
+    //         type="text"
+    //         name="subject"
+    //         placeholder="How can we help you?"
+    //         required
+    //         className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+    //       />
+
+    //       <input
+    //         type="text"
+    //         name="phone"
+    //         placeholder="Enter your phone number"
+    //         required
+    //         className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+    //       />
+
+    //       <textarea
+    //         name="message"
+    //         placeholder="Enter your message"
+    //         rows={4}
+    //         required
+    //         className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+    //       ></textarea>
+
+    //       <button
+    //         type="submit"
+    //         className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-pink-500 to-blue-600 hover:opacity-90 transition"
+    //       >
+    //         Send
+    //       </button>
+    //     </form>
+    //   </div>
+    // </div>
+
+    <section
       id="contact"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 px-6 py-12"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 to-purple-100 px-4 sm:px-6 lg:px-12 py-10"
     >
-      <div className=" w-full grid md:grid-cols-2 gap-12 items-center px-6">
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-16 items-center">
         {/* Left Content */}
-        <div>
-          <h2 className="text-4xl font-extrabold text-gray-900 leading-snug">
+        <div className="text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug">
             Schedule Your{" "}
             <span className="bg-gradient-to-r from-pink-500 to-blue-600 bg-clip-text text-transparent">
               Appointment
             </span>
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg">
             From first hello to final handshake, we're here to assist you every
             step of the way. Reach out—your next big move starts here.
           </p>
 
-          <ul className="mt-6 space-y-3 text-gray-700">
+          <ul className="mt-6 space-y-2 text-gray-700 text-sm sm:text-base">
             <li>⚡ Connect all your tools in one place.</li>
             <li>🚀 Stay ahead with cutting-edge features.</li>
             <li>🧩 Tailor our platform to your needs.</li>
@@ -209,12 +302,12 @@ function ContactSection() {
         {/* Right Form */}
         <form
           onSubmit={onSubmit}
-          className="bg-white shadow-lg rounded-2xl p-8 space-y-5 relative"
+          className="bg-white shadow-lg rounded-2xl p-6 sm:p-8 md:p-10 space-y-4 sm:space-y-5 relative"
         >
           {/* Popup Message */}
           {popup && (
             <div
-              className={`absolute top-[-50px] left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-md text-white ${
+              className={`absolute -top-12 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg shadow-md text-white text-sm sm:text-base ${
                 popup.type === "success" ? "bg-green-500" : "bg-red-500"
               }`}
             >
@@ -227,50 +320,46 @@ function ContactSection() {
             name="email"
             placeholder="Enter your email"
             required
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+            className="w-full px-4 py-3 sm:py-4 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm sm:text-base"
           />
-
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
             required
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+            className="w-full px-4 py-3 sm:py-4 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm sm:text-base"
           />
-
           <input
             type="text"
             name="subject"
             placeholder="How can we help you?"
             required
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+            className="w-full px-4 py-3 sm:py-4 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm sm:text-base"
           />
-
           <input
             type="text"
             name="phone"
             placeholder="Enter your phone number"
             required
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+            className="w-full px-4 py-3 sm:py-4 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm sm:text-base"
           />
-
           <textarea
             name="message"
             placeholder="Enter your message"
             rows={4}
             required
-            className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none"
+            className="w-full px-4 py-3 sm:py-4 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm sm:text-base"
           ></textarea>
 
           <button
             type="submit"
-            className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-pink-500 to-blue-600 hover:opacity-90 transition"
+            className="w-full py-3 sm:py-4 rounded-full text-white font-semibold bg-gradient-to-r from-pink-500 to-blue-600 hover:opacity-90 transition text-sm sm:text-base"
           >
             Send
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -22,7 +22,7 @@ const FeatureSection = () => {
       ref={ref}
       className="relative bg-[#f8e6f4] py-16 px-4 md:py-24 md:px-6 overflow-hidden"
     >
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+      <div className=" mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         {/* Phone Image */}
         <motion.figure
           animate={{ y: [0, -12, 0] }}
@@ -32,6 +32,7 @@ const FeatureSection = () => {
           <img
             src={Phone}
             alt="Phone"
+            loading="lazy"
             className="w-[260px] sm:w-[300px] md:w-[420px] object-contain"
           />
 

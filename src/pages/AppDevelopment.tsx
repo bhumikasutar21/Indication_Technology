@@ -211,7 +211,7 @@ const AppDevelopment = () => {
       <FeaturesWithPhone />
 
       {/* Page Wrapper with 80% width */}
-      <div className="w-[90%] mx-auto px-6">
+      <div className="w-[90%] mx-auto ">
         {/* Portfolio Mobile Animation Section */}
 
         <section className="py-12 md:py-20 bg-background">
@@ -240,6 +240,7 @@ const AppDevelopment = () => {
                       <img
                         src={item.image}
                         alt={item.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
@@ -272,21 +273,81 @@ const AppDevelopment = () => {
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
             {/* <img src={client1} alt="Client 1" className="h-12 w-64" /> */}
-            <img src={client2} alt="Client 2" className="h-12 w-auto" />
-            <img src={client3} alt="Client 3" className="h-12 w-auto" />
-            <img src={client4} alt="Client 4" className="h-12 w-auto" />
-            <img src={client5} alt="Client 5" className="h-10 w-64" />
-            <img src={client6} alt="Client 6" className="h-8 w-64" />
-            <img src={client7} alt="Client 7" className="h-10 w-64" />
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
 
             {/* Duplicates */}
             {/* <img src={client1} alt="Client 1" className="h-10 w-64" /> */}
-            <img src={client2} alt="Client 2" className="h-12 w-auto" />
-            <img src={client3} alt="Client 3" className="h-12 w-auto" />
-            <img src={client4} alt="Client 4" className="h-12 w-auto" />
-            <img src={client5} alt="Client 5" className="h-10 w-64" />
-            <img src={client6} alt="Client 6" className="h-8 w-64" />
-            <img src={client7} alt="Client 7" className="h-10 w-64" />
+            <img
+              src={client2}
+              alt="Client 2"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client3}
+              alt="Client 3"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client4}
+              alt="Client 4"
+              className="h-12 w-auto"
+              loading="lazy"
+            />
+            <img
+              src={client5}
+              alt="Client 5"
+              className="h-10 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client6}
+              alt="Client 6"
+              className="h-8 w-64"
+              loading="lazy"
+            />
+            <img
+              src={client7}
+              alt="Client 7"
+              className="h-10 w-64"
+              loading="lazy"
+            />
           </motion.div>
         </div>
 
@@ -298,6 +359,7 @@ const AppDevelopment = () => {
               <img
                 src={plan}
                 alt="Team working"
+                loading="lazy"
                 className="rounded-xl shadow-lg w-full h-69 object-cover"
               />
 
@@ -411,6 +473,7 @@ const AppDevelopment = () => {
                       <img
                         src={category.image}
                         alt={category.title}
+                        loading="lazy"
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                       />
                     </div>
@@ -453,6 +516,7 @@ const AppDevelopment = () => {
                     <img
                       src={language.logo}
                       alt={language.name}
+                      loading="lazy"
                       className="h-12 w-12 object-contain"
                     />
                     <p className="font-medium text-foreground">
