@@ -240,7 +240,7 @@
 
 /* Small screens */
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   .about-container {
     padding: 0 1rem;
   }
