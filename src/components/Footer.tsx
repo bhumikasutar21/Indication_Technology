@@ -153,7 +153,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="border-t border-gray-800 px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Copyright */}
         {/* <p className="text-xs sm:text-sm text-gray-400 text-center sm:text-left">
           © 2025 by{" "}
