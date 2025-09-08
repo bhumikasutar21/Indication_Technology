@@ -1,9 +1,126 @@
+/* 
+.hero-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+ 
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff007f, #6a0dad, #00008b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.hero-button {
+  background: linear-gradient(90deg, #ff007f, #6a0dad, #00008b);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 550px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-button {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  .hero-container {
+    padding: 2rem;
+  }
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.25;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 80%;
+  }
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+} */
+
 /* Container */
 .hero-container {
   position: relative;
   z-index: 10;
   width: 100%;
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
@@ -20,8 +137,8 @@
 .hero-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 3.5rem;
-  line-height: 1.2;
+  font-size: 1.8rem; /* default (mobile <640px) */
+  line-height: 1.3;
   color: #fff;
   margin-bottom: 1.5rem;
 }
@@ -34,11 +151,11 @@
 
 /* Subtitle */
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem; /* default mobile */
   color: #e5e7eb;
   margin-bottom: 2rem;
-  line-height: 1.7;
-  max-width: 750px;
+  line-height: 1.6;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,12 +166,13 @@
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 1.125rem;
-  padding: 1rem 2rem;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 9999px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  width: 100%; /* mobile full-width */
 }
 
 .hero-button:hover {
@@ -75,84 +193,72 @@
   }
 }
 
-/* Responsive */
-/* @media (min-width: 768px) {
-  .hero-container {
-    text-align: center;
-    padding: 2rem;
-  }
+/* Breakpoints - Tailwind equivalents */
 
+/* sm: ≥640px */
+@media (min-width: 640px) {
   .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-container {
-    text-align: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  } */
-
-/* .hero-title {
-    font-size: 3.5rem; 
-    line-height: 1.3;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
-    max-width: 950px;
-  } */
-/* } */
-
-/* Responsive Breakpoints */
-
-/* Small phones */
-@media (max-width: 550px) {
-  .hero-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   .hero-button {
-    width: 100%;
+    width: auto;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
   }
 }
 
-/* Tablets (iPad Mini, iPad, Surface Pro 7) */
-@media (min-width: 768px) and (max-width: 1180px) {
+/* md: ≥768px */
+@media (min-width: 768px) {
   .hero-container {
     padding: 2rem;
   }
   .hero-title {
     font-size: 3rem;
-    line-height: 1.25;
   }
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     max-width: 80%;
-  }
-  .hero-button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
   }
 }
 
-/* Large desktops */
-@media (min-width: 1440px) {
+/* lg: ≥1024px */
+@media (min-width: 1024px) {
+  .hero-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 900px;
+  }
+}
+
+/* xl: ≥1280px */
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* 2xl: ≥1536px */
+@media (min-width: 1536px) {
   .hero-title {
     font-size: 5rem;
   }
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
