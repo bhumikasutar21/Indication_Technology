@@ -138,7 +138,7 @@ const AboutUs = () => {
       </section>
 
       {/* Open Positions Section */}
-      <div className="w-[90%] mx-auto px-6">
+      <div className="w-[100%] mx-auto ">
         {/* <section className="py-20 bg-background">
           <motion.div
             className="container mx-auto px-6"
